@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,body {
+    width: 100%;
+}
+.btn-login {
+    background: none;
+    border: 0;
+    cursor: pointer;
+    font-size: 16px;
+}
+.btn-login:hover {
+    color: #6e6ee9;
+}
+.modal {
+    background-color: rgba(60,60,60,0.65);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.modal-content {
+    width: 768px;
+    height: 345px;
+    background-color: #ffffff;
+    margin-top: 80px;
+    margin: 80px auto 0;
+    position: relative;
+}
+
+.modal-content .close-modal-btn {
+    position: absolute;
+    right: -8px;
+    top: -8px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.modal .tabs {
+    display: flex;
+}
+
+
+
+
+
+
+
+
+
+

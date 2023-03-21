@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="tooltip_all">
+        <div class="tooltip1">
+            <p class="tooltip1_text"> Branding </p><br>
+            <span class="tooltiptext1">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</span>
+        </div>
+        <div class="tooltip1">
+            <p class="tooltip1_text"> Branding </p><br>
+            <span class="tooltiptext1">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</span>
+        </div>
+        <div class="tooltip1">
+            <p class="tooltip1_text"> Branding </p><br>
+            <span class="tooltiptext1">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</span>
+        </div>
+    </div>
+</body>
+<style>
+ .tooltip_all{
+    display: flex;
+    gap: 57px;
+ }
+.tooltip1_text{
+    color: black;
+    position: absolute;
+    font-size:20px ;
+
+}
+.tooltip1 { 
+       
+        color: #fff;
+        position: absolute;
+        border-bottom: 1px black;
+    }
+    .tooltip1 .tooltiptext1{
+        
+        font-size: 18px;
+        visibility: hidden;
+        width: 590px; 
+        background-color: #011A2C;
+        color: #fff;
+        border-radius: 6px;
+        top: 50px;
+        padding: 5px 0;/* Position the tooltip */  
+        position: absolute;
+         /* Tooltip sẽ hiện lên dần dần, độ mờ tăng dần từ 0 lên 100% trong 2s */  
+         opacity: 0;  
+        transition: opacity 1s;
+    }
+    .tooltip1:hover .tooltiptext1 { 
+        visibility: visible;
+        opacity: 1;
+
+      }
+
+</style>
+
+</html>

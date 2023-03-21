@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <script src="https://kit.fontawesome.com/b700018786.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="index.css">
+  <script src="./index.js"></script>
+</head>
+
+<body>
+  <div class="wrapper-top">
+    <div class="top-nav">
+      <div style="display: flex; align-items: center">
+        <button class="btn-show-menu"><i style="font-size: 20px; color:#bdbdbd" class="fa-solid fa-bars"></i></button>
+        <img src="https://s1.vnecdn.net/vnexpress/restruct/i/v671/v2_2019/pc/graphics/logo.svg"
+          alt="VnExpress - Bao tieng Viet nhieu nguoi xem nhat">
+      </div>
+      <div>
+        <div class="input-search">
+          <input class="search" placeholder="Tìm kiếm">
+          <i class="fa-solid fa-magnifying-glass btn-search" style="color: #bdbdbd; cursor: pointer;"></i>
+        </div>
+        <button class="btn-login"><i style="color: #bdbdbd; margin-right: 2px;" class="fa-solid fa-user"></i> Đăng
+          nhập</button>
+      </div>
+    </div>
+  </div>
+  <div class="wrapper">
+    <ul class="main-menu">
+      <li class="menu-item menu-item-logo">
+        <div class="logo">
+          <a href="#"><i class="fa-solid fa-house"></i></a>
+        </div>
+      </li>
+      <li class="menu-item hidden special">
+        <a href="#">Mới nhất</a>
+      </li>
+      <li class="menu-item">
+        <a href="#">Mới nhì</a>
+      </li>
+      <li class="menu-item">
+        <a href="#">Thời sự</a>
+      </li>
+      <li class="menu-item">
+        <a href="#">Góc nhìn</a>
+      </li>
+      <li class="menu-item">
+        <a href="#">Góc nhìn</a>
+      </li>
+      <li class="menu-item">
+        <a href="#">Thế giới</a>
+      </li>
+      <li class="menu-item">
+        <a href="#">Video</a>
+      </li>
+      <li class="menu-item">
+        <a href="#">Giải trí</a>
+      </li>
+      <li class="menu-item">
+        <a href="#">Thể thao</a>
+      </li>
+      <li class="menu-item">
+        <a href="#">Pháp luật</a>
+      </li>
+      <li class="menu-item">
+        <a href="#">Sức khỏe</a>
+      </li>
+      <li class="menu-item">
+        <a href="#">Đời sống</a>
+      </li>
+      <li class="menu-item">
+        <a href="#">Ý kiến</a>
+      </li>
+
+      <li class="menu-item btn-show-all">
+        <a href="#" onclick="showLargeMenu()">Tất cả <i class="fa-solid fa-bars"></i></a>
+      </li>
+    </ul>
+    <div class="menu-large">
+
+    </div>
+  </div>
+  <div class="body" style="height: 2000px;">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat laboriosam voluptatem dignissimos sunt nostrum amet
+    accusamus. Ipsum culpa nobis accusantium esse error! Consequuntur libero reiciendis sapiente velit cum laboriosam
+    temporibus!
+    Officia nemo totam molestias, culpa deserunt itaque eligendi. Consectetur harum adipisci tempora quaerat aliquam
+    ullam repudiandae sapiente facilis asperiores! A debitis, labore ipsam tenetur saepe reprehenderit cupiditate
+    numquam voluptatum vel.
+    Aliquid nobis quas eligendi voluptate omnis sint modi, quidem nemo iusto non ipsam dolorem placeat error? Assumenda
+    dicta quae quis numquam, unde fuga deserunt incidunt placeat autem et porro temporibus.
+    Assumenda ipsum sunt dolore necessitatibus minima commodi dignissimos officia illum, cupiditate odio, ullam maxime
+    quae placeat corrupti consequuntur dolorem minus similique. Aliquid id facilis facere sunt error accusantium tempora
+    mollitia.
+    Magnam odio hic aut corrupti nihil nemo, labore dolorum eos quod natus id earum architecto sequi nulla provident
+    consequatur non debitis qui delectus accusantium itaque! Harum earum deleniti reprehenderit asperiores?
+    Placeat iusto, adipisci distinctio deleniti porro perferendis debitis suscipit alias velit laborum amet inventore
+    corporis blanditiis ipsum facilis minus error odit quaerat mollitia quis accusantium nihil, sunt tempore soluta.
+    Eaque!
+    Odit, sit, quis officiis temporibus asperiores sequi ut praesentium facilis neque cumque magni earum ea
+    exercitationem eveniet ipsum similique saepe dolores quia quas qui! Corrupti quas odio eum illum impedit.
+    Officia quia veniam odit optio facilis voluptatem veritatis, mollitia nemo in possimus ipsa exercitationem ipsam
+    molestiae doloribus, vero accusantium laboriosam earum reiciendis assumenda non libero qui. Labore placeat rem
+    incidunt?
+    Odit vero incidunt suscipit accusantium repellendus, corporis iste perferendis minus assumenda, officia quisquam,
+    quia eveniet totam cum est ipsam enim eos hic. Doloremque rerum incidunt magni sint nemo sunt quae.
+    Quo ducimus optio temporibus. Quo id itaque doloremque asperiores omnis placeat nihil exercitationem temporibus
+    quibusdam incidunt minus expedita cupiditate culpa consequuntur rerum eius possimus ipsa facere fugit blanditiis,
+    officia a!
+  </div>
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close-modal-btn">&#x2715</span>
+        <div class="tabs">
+          <div class="tab active" onclick="changeTab('login')">
+            Đăng nhập
+          </div>
+          <div class="tab" onclick="changeTab('register')">
+            Tạo tài khoản
+          </div>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="modal-body_wrapper modal-body_wrapper-login active">
+          <div class="login custom-login">
+            <p class="header-login">Đăng nhập với email</p>
+            <div class="form-login">
+              <input class="text-field">
+              <div class="wrapper-input-password">
+                <input class="text-field">
+                <div class="show-pass-btn">
+                  ẩn <i class="fa-solid fa-eye"></i>
+                </div>
+              </div>
+              <input type="submit" class="sumbit-login" value="Đăng nhập">
+              <p style="text-align:center;">Lấy lại mật khẩu</p>
+            </div>
+          </div>
+          <div class="login social-login">
+            <p class="header-login">Đăng nhập với</p>
+          </div>
+        </div>
+        <div class="modal-body_wrapper modal-body_wrapper-register">
+          <div class="login custom-login">
+            <p class="header-login">Đăng ký với email</p>
+            <div class="form-login">
+              <input class="text-field">
+              <div class="wrapper-input-password">
+                <input class="text-field">
+                <div class="show-pass-btn">
+                  ẩn <i class="fa-solid fa-eye"></i>
+                </div>
+              </div>
+              <input type="submit" class="sumbit-login" value="Đăng nhập">
+              <p style="text-align:center;">Lấy lại mật khẩu</p>
+            </div>
+          </div>
+          <div class="login social-login">
+            <p class="header-login">Đăng ký với</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <style>
+
+  </style>
+  
+  <script>
+    document.addEventListener("scroll", function (e) {
+      let scrollTop = window.scrollY;
+      let menuItemNotSpecial = document.querySelectorAll(".menu-item:not(.btn-show-all):not(.menu-item-logo)");
+      console.log(menuItemNotSpecial);
+      if (scrollTop >= 50) {
+        if (menuItemNotSpecial) {
+          let size = menuItemNotSpecial.length;
+          menuItemNotSpecial[size - 1].classList.add("hidden");
+          menuItemNotSpecial[size - 2].classList.add("hidden");
+          menuItemNotSpecial[0].classList.remove("hidden");
+        }
+      } else {
+        if (menuItemNotSpecial) {
+          let size = menuItemNotSpecial.length;
+          menuItemNotSpecial[size - 1].classList.remove("hidden");
+          menuItemNotSpecial[size - 2].classList.remove("hidden");
+          menuItemNotSpecial[0].classList.add("hidden");
+        }
+      }
+    })
+    let btnOpenModalLogin = document.querySelector(".btn-login");
+    let btnCloseModal = document.querySelector(".close-modal-btn");
+    console.log(btnOpenModalLogin);
+    let modal = document.getElementById("modal")
+    if (btnOpenModalLogin) {
+      btnOpenModalLogin.onclick = () => {
+        modal.style.display = "block";
+      }
+      btnCloseModal.onclick = () => {
+        modal.style.display = "none"
+      }
+    }
+  </script>
+</body>
+
+</html>

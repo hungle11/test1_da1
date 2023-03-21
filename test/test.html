@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+ <style>
+    .slide-container-all{
+        background-color: #EFEFEF;
+        z-index: 0;
+        position: relative;
+        width: 100%;
+    }
+    .slide-container1 {
+    width: 30%;
+    height: 391px;
+    margin: auto;
+    margin-top: 30px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;   
+    background-color: #EFEFEF;
+}
+.slide-item1 {
+    text-align: center;
+    transition: 500ms;
+    position: absolute;
+}
+.slide-item1.active {
+    z-index: 1;
+}
+
+.next1, .prev1 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 50px;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #EFEFEF;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.prev1 {
+    left: 10px;
+   
+}
+
+.next1 {
+    right: 10px;}
+.img_comment{
+    top: 50px;
+    position: absolute;
+    z-index: 1;
+}
+
+ </style>
+<body>
+    
+    <div class="slide-container-all">
+        <center><img class="img_comment" src="./img/comment.png" alt=""></center>
+        <div class="prev1" onclick="changeSlide('prev1')">
+            <img src="./img/icon_prev.png" alt="">
+        </div>
+    <div class="slide-container1">
+        <div class="slide-item1">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tellus vitae congue id ipsum sed neque et dui accumsan. Nibh semper magna facilisi ridiculus luctus amet. Aliquam </p>
+            <p>Soroush norozy </p>
+            <p>Designer</p>
+        </div>
+        <div class="slide-item1">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tellus vitae congue id ipsum sed neque et dui accumsan. Nibh semper magna facilisi ridiculus luctus amet. Aliquam </p>
+            <p>Hung lee </p>
+            <p>Designer</p>
+        </div>
+        <div class="slide-item1">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tellus vitae congue id ipsum sed neque et dui accumsan. Nibh semper magna facilisi ridiculus luctus amet. Aliquam </p>
+            <p>Hung lee </p>
+            <p>Designer</p>
+        </div>
+        
+        
+        
+    </div>
+    <div class="next1" onclick="changeSlide('next1')">
+        <img src="./img/icon_next.png" alt="">
+    </div>
+</div>
+    <script>
+        let slides = document.querySelectorAll(".slide-item1");
+        slides.forEach((item, index) => {
+            console.log(item);
+            item.style.transform = `translateX(${index * 100}%)`
+        })
+        let currentSlide = 0;
+        let maxSlide = slides.length - 1;
+        function changeSlide(type) {
+            if (type === "next1 ") {
+                if (currentSlide === maxSlide) {
+                    currentSlide = 0;
+                } else {
+                    currentSlide++;
+                }
+
+                slides.forEach((item, index) => {
+                    item.style.transform = `translateX(${(index - currentSlide) * 100}%)`
+                })
+            } else {
+                if (currentSlide === 0) {
+                    currentSlide = maxSlide;
+                } else {
+                    currentSlide--;
+                }
+                slides.forEach((item, index) => {
+                    item.style.transform = `translateX(${(index - currentSlide) * 100}%)`
+                })
+
+            }
+        }
+    </script>
+</body>
+
+</html>

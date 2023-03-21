@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/b700018786.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<style>
+    * {
+    margin: 0;
+    padding: 0
+}
+
+.slide-container {
+    width: 1080px;
+    margin: auto;
+    margin-top: 30px;
+    height: 357px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+}
+.slide-item {
+    transition: 500ms;
+    position: absolute;
+}
+.slide-item.active {
+    z-index: 1;
+}
+
+.next, .prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 50px;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(207, 207, 207, 0.48);
+    cursor: pointer;
+    z-index: 2;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    z-index: 2;
+}
+
+.dot {
+    border-radius: 50%;
+    background-color: #818181;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    margin:  0 3px;
+}
+
+.dot.active {
+    background-color: #ffffff;
+}
+</style>
+
+<body>
+    <div class="slide-container">
+        <div class="slide-item">
+            <img src="https://salt.tikicdn.com/ts/banner/99/68/96/fcccbcda4a8b40194dbd3697e41f88e6.png">
+        </div>
+        <div class="slide-item">
+            <img src="https://salt.tikicdn.com/ts/banner/d0/81/10/5dc52b9b4954d8097d45ccf9647fd63f.png">
+        </div>
+        <div class="slide-item">
+            <img src="https://salt.tikicdn.com/ts/banner/8f/0c/1f/0ccc95c52ebb066ad2011725f93390f7.png">
+        </div>
+        <div class="prev" onclick="changeSlide('prev')">
+            <i class="fa-solid fa-chevron-left"></i>
+        </div>
+        <div class="next" onclick="changeSlide('next')">
+            <i class="fa-solid fa-chevron-right"></i>
+        </div>
+        
+    </div>
+    <script>
+        let slides = document.querySelectorAll(".slide-item");
+        slides.forEach((item, index) => {
+            console.log(item);
+            item.style.transform = `translateX(${index * 100}%)`
+        })
+        let currentSlide = 0;
+        let maxSlide = slides.length - 1;
+        function changeSlide(type) {
+            if (type === "next") {
+                if (currentSlide === maxSlide) {
+                    currentSlide = 0;
+                } else {
+                    currentSlide++;
+                }
+
+                slides.forEach((item, index) => {
+                    item.style.transform = `translateX(${(index - currentSlide) * 100}%)`
+                })
+            } else {
+                if (currentSlide === 0) {
+                    currentSlide = maxSlide;
+                } else {
+                    currentSlide--;
+                }
+                slides.forEach((item, index) => {
+                    item.style.transform = `translateX(${(index - currentSlide) * 100}%)`
+                })
+
+            }
+        }
+    </script>
+</body>
+
+</html>
